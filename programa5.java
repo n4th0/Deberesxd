@@ -1,32 +1,27 @@
 import java.util.*;
 
-
 public class programa5 {
-
     
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int foowhile = 10;
         
-        ArrayList<Integer> al = new ArrayList<Integer>();
+        Scanner sc = new Scanner( System.in );
+        int num;
+        int suma_total;
+        suma_total=0;
 
-
-        while(foowhile <= 10){
-            System.out.println("Dime una nota");
-            int n = sc.nextInt();
-            al.add(n);
-            foowhile = foowhile - 1;
-            if (foowhile == 0){
+        for (int i=1;i<=10;i++){
+            System.out.print("Introduzca una nota: ");
+            num = sc.nextInt();
+            if(num <= 0 ^ num > 10){
+                System.out.println("tienes que poner una nota de verdad");
                 break;
             }
-        }
-        int suma = 0;
-        for (int i = 0; i < al.length; i = i + 1){
-            suma+=al[i]; 
-        }
 
-        System.out.println(al);
-        
+            suma_total=suma_total+num;
+        }
+        float suma_total22 = suma_total, n = 10;
+        float r = suma_total22/n; 
+        System.out.println("El promedio total es de: " + r);
 
     } 
     
